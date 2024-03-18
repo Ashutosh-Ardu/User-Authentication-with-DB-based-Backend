@@ -1,0 +1,30 @@
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.mid{
+    margin-top: 40px;
+}
+
+.error-actions {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
+}
+
+.logbtn {
+    color: white;
+    background-color: #3f51b5;
+}
+
+.logbtn:hover {
+    transition: all ease-out 0.5s;
+    background-color: white;
+    color: #3f51b5;
+}

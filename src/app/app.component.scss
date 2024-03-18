@@ -1,0 +1,23 @@
+mat-toolbar {
+  justify-content: space-between;
+}
+
+.content {
+  padding: 32px;
+}
+
+.profile-image-toolbar {
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+.logbtn{
+  color: white;
+  background-color: #3f51b5;
+}
+
+.logbtn:hover{
+  transition: all ease-out 0.5s;
+  background-color: white;
+  color: #3f51b5;
+}
