@@ -24,8 +24,10 @@
           matInput
           formControlName="firstName"
           placeholder="First Name"
-          pattern = "[A-Za-z]{1,20}"
         />
+        <mat-error *ngIf="profileForm.get('firstName')?.invalid">
+          Only Alphabets, No spaces
+        </mat-error>
       </mat-form-field>
       <mat-form-field>
         <input
@@ -33,12 +35,14 @@
           matInput
           formControlName="lastName"
           placeholder="Last Name"
-          pattern = "[A-Za-z]{1,20}"
         />
+        <mat-error *ngIf="profileForm.get('lastName')?.invalid">
+          Only Alphabets, No spaces
+        </mat-error>
       </mat-form-field>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
       <mat-form-field>
         <input
           type="text"
@@ -52,8 +56,10 @@
           type="tel"
           matInput
           formControlName="phone"
-          pattern="[0-9]{10}"
         />
+        <mat-error *ngIf="profileForm.get('phone')?.invalid">
+          Only Numbers with length 10, No spaces
+        </mat-error>
       </mat-form-field>
     </div>
     <mat-form-field>
@@ -62,8 +68,10 @@
         matInput
         formControlName="address"
         placeholder="Address"
-        pattern = "[A-Za-z0-9, -]{1,40}"
       />
+      <mat-error *ngIf="profileForm.get('address')?.invalid">
+        Only Alphabets, Numbers, & Hyphen allowed
+      </mat-error>
     </mat-form-field>
 
     <button type="submit" class="margin-top" mat-raised-button color="primary">
