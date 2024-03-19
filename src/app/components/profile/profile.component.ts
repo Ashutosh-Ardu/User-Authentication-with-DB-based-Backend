@@ -6,6 +6,7 @@ import { switchMap, tap } from 'rxjs';
 import { ProfileUser } from 'src/app/models/user';
 import { ImageUploadService } from 'src/app/services/image-upload.service';
 import { UsersService } from 'src/app/services/users.service';
+import { Validator } from '@angular/forms';
 
 @UntilDestroy()
 @Component({
@@ -19,10 +20,10 @@ export class ProfileComponent implements OnInit {
   profileForm = this.fb.group({
     uid: [''],
     displayName: [''],
-    firstName: [''],
-    lastName: [''],
-    phone: [''],
-    address: [''],
+    firstName: ['',Validators.pattern('[A-Za-z]{1,20}')],
+    lastName: ['',Validators.pattern('[A-Za-z]{1,20}')],
+    phone: ['',Validators.pattern('[0-9]{10}')],
+    address: ['',Validators.pattern('[A-Za-z0-9 -]{1,40}')],
   });
 
   constructor(
