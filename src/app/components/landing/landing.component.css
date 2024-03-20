@@ -34,3 +34,29 @@
     /* box-shadow: 10px 10px 10px 10px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
+  .typing-demo {
+    /* width: 9ch; */
+    /* animation: typing 2s steps(22), blink .5s step-end infinite alternate; */
+    animation: typing 5s steps(22) infinite, blink .8s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+
+  @keyframes typing {
+    0% { width:0 }
+    25% { width: 50% }
+    48% { width: 50% }
+    50% { width: 50% }
+    55% { width: 50% }
+    75% { width: 50%; }
+    85% { width: 30%; }
+    100% { width: 0; }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
